@@ -1,14 +1,14 @@
 {
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "15.0.0",
   "packages": [
     "projects/*"
   ],
-  "version": "16.0.0",
   "command": {
-    "publish": {
-      "conventionalCommits": true
-    },
     "version": {
-      "message": "chore(release): publish %s"
+      "conventionalCommits": true,
+      "message": "chore(release): publish %s",
+      "forcePublish": true
     }
   }
 }

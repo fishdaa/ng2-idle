@@ -1,10 +1,9 @@
 import {
   EventEmitter,
-  Inject,
+  inject,
   Injectable,
   NgZone,
   OnDestroy,
-  Optional,
   PLATFORM_ID
 } from '@angular/core';
 
@@ -48,7 +47,6 @@ export class Idle implements OnDestroy {
   private timeoutHandle: any;
   private countdown: number;
   private keepaliveEnabled = false;
-  private keepaliveSvc: KeepaliveSvc;
 
   public onIdleStart: EventEmitter<any> = new EventEmitter();
   public onIdleEnd: EventEmitter<any> = new EventEmitter();
@@ -58,14 +56,13 @@ export class Idle implements OnDestroy {
 
   [key: string]: any;
 
-  constructor(
-    private expiry: IdleExpiry,
-    private zone: NgZone,
-    @Optional() keepaliveSvc?: KeepaliveSvc,
-    @Optional() @Inject(PLATFORM_ID) private platformId?: Object
-  ) {
-    if (keepaliveSvc) {
-      this.keepaliveSvc = keepaliveSvc;
+  private expiry = inject(IdleExpiry);
+  private zone = inject(NgZone);
+  private keepaliveSvc = inject(KeepaliveSvc, { optional: true });
+  private platformId = inject(PLATFORM_ID, { optional: true });
+
+  constructor() {
+    if (this.keepaliveSvc) {
       this.keepaliveEnabled = true;
     }
     this.setIdling(false);

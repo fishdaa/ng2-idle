@@ -1,0 +1,116 @@
+<section class="main-content mat-typography">
+  <h1>Zoneless Angular Applications</h1>
+  
+  <p>
+    Angular 18+ introduced support for running applications without Zone.js, also known as "zoneless" Angular.
+    This guide explains how to use <code>@ng-idle/core</code> and <code>@ng-idle/keepalive</code> in zoneless Angular applications.
+  </p>
+
+  <h2>What is Zoneless Angular?</h2>
+  <p>
+    Zoneless Angular allows you to run Angular applications without Zone.js, which provides several benefits including
+    better performance, smaller bundle size, and more predictable change detection. Instead of relying on Zone.js to
+    automatically detect changes, you use Angular's signals or manually trigger change detection.
+  </p>
+
+  <h2>Configuring Your Application</h2>
+  <p>
+    To enable zoneless change detection, use <code>provideZonelessChangeDetection()</code> instead of
+    <code>provideZoneChangeDetection()</code> in your application configuration:
+  </p>
+  <pre><code [highlight]="configureZonelessApp" [language]="typescript"></code></pre>
+
+  <h2>Using Signals (Recommended)</h2>
+  <p>
+    The recommended approach for zoneless applications is to use Angular signals for state management.
+    Signals automatically trigger change detection when their values change, making them perfect for zoneless apps.
+  </p>
+  <pre><code [highlight]="configureZonelessWithSignals" [language]="typescript"></code></pre>
+
+  <h3>Template with Signals</h3>
+  <p>
+    In your template, you can use signals directly with the <code>()</code> syntax:
+  </p>
+  <pre><code [highlight]="configureZonelessTemplate" [language]="html"></code></pre>
+
+  <h2>Using OnPush Change Detection</h2>
+  <p>
+    If you prefer not to use signals, you can use the OnPush change detection strategy and manually trigger
+    change detection using <code>ChangeDetectorRef.markForCheck()</code>:
+  </p>
+  <pre><code [highlight]="configureZonelessWithOnPush" [language]="typescript"></code></pre>
+
+  <h2>How @ng-idle/core Works with Zoneless</h2>
+  <p>
+    <code>@ng-idle/core</code> is fully compatible with zoneless Angular applications. The library uses
+    <code>NgZone</code> internally for running intervals outside Angular's change detection, but this
+    doesn't interfere with zoneless applications. The key points:
+  </p>
+  <ul>
+    <li>
+      <strong>Event Emitters</strong>: The <code>Idle</code> service uses RxJS Observables and EventEmitters
+      that work seamlessly with zoneless apps. When you subscribe to events like <code>onIdleStart</code>,
+      <code>onIdleEnd</code>, etc., you can update your signals or trigger change detection as needed.
+    </li>
+    <li>
+      <strong>Interrupt Sources</strong>: All interrupt sources (DocumentInterruptSource, WindowInterruptSource, etc.)
+      work correctly in zoneless applications because they rely on native DOM events.
+    </li>
+    <li>
+      <strong>No Special Configuration</strong>: You don't need any special configuration for <code>@ng-idle/core</code>
+      to work with zoneless apps. Just use signals or OnPush with manual change detection.
+    </li>
+  </ul>
+
+  <h2>Best Practices</h2>
+  <ul>
+    <li>
+      <strong>Use Signals</strong>: Prefer signals over traditional properties with ChangeDetectorRef for better
+      reactivity and automatic change detection.
+    </li>
+    <li>
+      <strong>Computed Signals</strong>: Use computed signals to derive values from other signals, reducing
+      the need for manual state management.
+    </li>
+    <li>
+      <strong>OnPush Strategy</strong>: If not using signals, always use OnPush change detection strategy
+      and call <code>markForCheck()</code> when state changes.
+    </li>
+    <li>
+      <strong>Event Handlers</strong>: Event handlers in templates automatically trigger change detection,
+      so you don't need to manually trigger it in click handlers, etc.
+    </li>
+  </ul>
+
+  <h2>Migration from Zone-based Apps</h2>
+  <p>
+    If you're migrating an existing application from zone-based to zoneless:
+  </p>
+  <ol>
+    <li>Replace <code>provideZoneChangeDetection()</code> with <code>provideZonelessChangeDetection()</code></li>
+    <li>Convert component properties to signals where possible</li>
+    <li>Add <code>ChangeDetectionStrategy.OnPush</code> to components not using signals</li>
+    <li>Add <code>cdr.markForCheck()</code> calls in subscription handlers if not using signals</li>
+    <li>Test thoroughly to ensure all state updates are reflected in the UI</li>
+  </ol>
+
+  <h2>Example: Complete Zoneless Setup</h2>
+  <p>
+    Here's a complete example showing how to set up a zoneless Angular application with <code>@ng-idle/core</code>:
+  </p>
+  <pre><code [highlight]="configureZonelessWithSignals" [language]="typescript"></code></pre>
+
+  <h2>Additional Resources</h2>
+  <ul>
+    <li>
+      <a href="https://angular.dev/guide/zoneless" target="_blank">Angular Zoneless Guide</a>
+    </li>
+    <li>
+      <a href="https://angular.dev/guide/signals" target="_blank">Angular Signals Guide</a>
+    </li>
+    <li>
+      <a href="https://angular.dev/api/core/provideZonelessChangeDetection" target="_blank">provideZonelessChangeDetection API</a>
+    </li>
+  </ul>
+</section>
+

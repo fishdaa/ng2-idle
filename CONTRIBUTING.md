@@ -140,8 +140,8 @@ Then you can do the following to release a new version
 [angularhelp]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#question
 [gitter]: https://gitter.im/HackedByChinese/ng2-idle
 [stackoverflow]: http://stackoverflow.com/questions/tagged/ng2-idle
-[github]: https://github.com/moribvndvs/ng2-idle
-[githubissues]: https://github.com/moribvndvs/ng2-idle/issues
+[github]: https://github.com/fishdaa/ng2-idle
+[githubissues]: https://github.com/fishdaa/ng2-idle/issues
 [commitizen]: https://github.com/commitizen/cz-cli
-[githubprs]: https://github.com/moribvndvs/ng2-idle/pulls
-[githubrepo]: https://github.com/moribvndvs/ng2-idle.git
+[githubprs]: https://github.com/fishdaa/ng2-idle/pulls
+[githubrepo]: https://github.com/fishdaa/ng2-idle

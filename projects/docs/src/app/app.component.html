@@ -1,6 +1,10 @@
 <header>
   <mat-toolbar>
     <div>&#64;ng-idle Documentation</div>
+    <div class="nav-links">
+      <a mat-button routerLink="/quickstart" routerLinkActive="active">Quick Start</a>
+      <a mat-button routerLink="/zoneless" routerLinkActive="active">Zoneless</a>
+    </div>
     <div class="idle-state">
       <span [ngClass]="{
         'online-status': true,
@@ -29,7 +33,7 @@
     </div>
     <div class="toolbar-spacer"></div>
     <a mat-icon-button class="example-icon" aria-label="Button linking to @ng-idle Github repository"
-      href="https://github.com/moribvndvs/ng2-idle">
+      href="https://github.com/fishdaa/ng2-idle">
       <fa-icon [icon]="faGithub" size="lg" aria-label="Github icon"></fa-icon>
     </a>
   </mat-toolbar>
