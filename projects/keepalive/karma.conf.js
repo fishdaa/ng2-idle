@@ -33,6 +33,10 @@ module.exports = function(config) {
       }
     },
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    parallelOptions: {
+      executors: 1, // Disable multithreading
+      shardStrategy: 'description'
+    },
   });
 };
