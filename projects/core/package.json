@@ -4,7 +4,7 @@
   "description": "A module for detecting and responding to the user becoming idle in Angular applications.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moribvndvs/ng2-idle.git"
+    "url": "https://github.com/fishdaa/ng2-idle"
   },
   "keywords": [
     "angular",
@@ -19,9 +19,9 @@
   "author": "Ng-Idle Team",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/moribvndvs/ng2-idle.git/issues"
+    "url": "https://github.com/fishdaa/ng2-idle/issues"
   },
-  "homepage": "https://github.com/moribvndvs/ng2-idle.git#readme",
+  "homepage": "https://github.com/fishdaa/ng2-idle#readme",
   "peerDependencies": {
     "@angular/common": "^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0",
     "@angular/core": "^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0"

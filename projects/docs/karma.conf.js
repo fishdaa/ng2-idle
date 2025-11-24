@@ -39,10 +39,6 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true,
-    parallelOptions: {
-      executors: 1, // Disable multithreading
-      shardStrategy: 'description'
-    },
+    restartOnFileChange: true
   });
 };

@@ -1,38 +1,13 @@
 # Introduction
 
-[![Build Status](https://github.com/moribvndvs/ng2-idle/workflows/ci/badge.svg)](https://github.com/moribvndvs/ng2-idle/actions?query=workflow%3Aci)
-[![Coverage Status](https://coveralls.io/repos/github/moribvndvs/ng2-idle/badge.svg?branch=master)](https://coveralls.io/github/moribvndvs/ng2-idle?branch=master)
+[![Build Status](https://github.com/fishdaa/ng2-idle/workflows/ci/badge.svg)](https://github.com/fishdaa/ng2-idle/actions?query=workflow%3Aci)
+[![Coverage Status](https://coveralls.io/repos/github/fishdaa/ng2-idle/badge.svg?branch=master)](https://coveralls.io/github/fishdaa/ng2-idle?branch=master)
 
 A module for responding to idle users in Angular applications. This is a rewrite of the [ng-idle module](https://github.com/moribvndvs/ng-idle); however if you are using Angular 1, you must use that module.
 
-## MAINTAINERS WANTED
-
-The Angular community needs you! I'm looking for a new developer or team to take over maintenance of this module. These are the responsibilities any interested candidates should consider:
-
-- Now: Complete beta process (major remaining item is to make it compatible with SSR)
-- Now: Update demo and add API documentation
-- Ongoing: Bug fixes
-- Ongoing: New releases for new versions of Angular
-- Later: Refactor to simplify API and reduce package size
-- Later: Add support for non-browser environments?
-
-Ideally, a candidate:
-
-- Has experience building applications in Angular 5+
-- Is an active Angular developer and tuned into the Angular release schedule
-- Loves open source and the Angular community
-- Is committed to releasing modular and lightweight (as possible) packages
-- Has working understanding of DOM events, JavaScript timers and intervals, Web Storage API, and cookies
-- Understands testing using Karma and Jasmine, and is committed to a high percentage of code coverage
-- Has working understanding of the [contributing guide](https://github.com/moribvndvs/ng2-idle/blob/master/CONTRIBUTING.md), is willing to accept contributions from others, and can use Github and related tools effectively
-- Has time to triage and answer tickets, or delegate to others
-- Has basic understanding of NPM for releasing packages
-
-Please get in touch if you are interested!
-
 ## Demo
 
-Visit https://moribvndvs.github.io/ng2-idle to view a simple example with quick start instructions.
+Visit https://fishdaa.github.io/ng2-idle to view a simple example with quick start instructions.
 
 ## Quick start
 
@@ -42,7 +17,7 @@ Visit https://moribvndvs.github.io/ng2-idle to view a simple example with quick 
 npm install --save @ng-idle/core
 ```
 
-Integrating and configuring the package into your application requires a few more steps. Please visit [@ng-idle-example](https://github.com/moribvndvs/ng2-idle-example.git) for source and instructions on how to get going.
+Integrating and configuring the package into your application requires a few more steps. Please visit [@ng-idle-example](https://github.com/fishdaa/ng2-idle-example.git) for source and instructions on how to get going.
 
 ## Design Considerations
 
@@ -121,6 +96,50 @@ npm run ng test keepalive
 
 Note: Keepalive depends on Core. If you are running the above continuous tests, you'll need to `npm build` or `npm run ng build core` first and after making changes to Core. However, `npm test` will build all modules and run the tests in one shot.
 
+## Contributors
+
+This project exists thanks to all the people who have contributed to it. We are grateful for every contribution, whether it's code, documentation, bug reports, or feature suggestions.
+
+### Core Contributors
+
+- **Mike Grabski** ([@moribvndvs](https://github.com/moribvndvs)) - Original creator and maintainer
+
+### Contributors (in alphabetical order)
+
+- **Andy Brandt**
+- **anu91ab** ([@anu91ab](https://github.com/anu91ab))
+- **ap1969** ([@ap1969](https://github.com/ap1969))
+- **Charles Mark Maynard**
+- **Chris Shouts** ([@un1c0rnr1d3r](https://github.com/un1c0rnr1d3r))
+- **Collin Eggert**
+- **David Preindl (DPR)**
+- **Deyan Valkanov**
+- **Gabriel Rousseau-Filion**
+- **Grant Hutchins** ([@nertzy](https://github.com/nertzy))
+- **Harel M**
+- **JustACodeMonkey** ([@JustACodeMonkey](https://github.com/JustACodeMonkey))
+- **Leif Segen**
+- **Marco Piovesana**
+- **Matt Varblow** ([@mvarblow](https://github.com/mvarblow))
+- **Md. Saiful Islam Bhuiyan** ([@BhuiyanSaif18](https://github.com/BhuiyanSaif18))
+- **Michael Mills**
+- **mmubasher**
+- **Mychal Hackman**
+- **Paul Ryan**
+- **Raul Crisan**
+- **shaizel**
+- **Steven Liekens**
+- **SuperITMan**
+- **Wes Trantham** / **Wesley Trantham** ([@wesley-trantham](https://github.com/wesley-trantham))
+
+### Special Thanks
+
+We also want to thank:
+- All contributors who reported bugs and suggested improvements
+- The open source community for their continued support
+
+If you've contributed to this project and your name is missing or incorrect, please open an issue or submit a pull request to update this list.
+
 ## Contributing
 
-See the [contributing guide](https://github.com/moribvndvs/ng2-idle/blob/master/CONTRIBUTING.md).
+See the [contributing guide](https://github.com/fishdaa/ng2-idle/blob/master/CONTRIBUTING.md).

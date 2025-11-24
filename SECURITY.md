@@ -17,7 +17,7 @@ If you discover a security vulnerability, please **do not** open a public issue.
 ### How to Report
 
 1. **Email**: Please email security concerns to the maintainers (check the repository for contact information)
-2. **GitHub Security Advisory**: If you have access, use GitHub's [Security Advisory](https://github.com/moribvndvs/ng2-idle/security/advisories/new) feature
+2. **GitHub Security Advisory**: If you have access, use GitHub's [Security Advisory](https://github.com/fishdaa/ng2-idle/security/advisories/new) feature
 3. **Private Issue**: Create a private security issue if you have the necessary permissions
 
 ### What to Include

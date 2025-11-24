@@ -4,14 +4,14 @@
   "version": "15.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moribvndvs/ng2-idle.git"
+    "url": "https://github.com/fishdaa/ng2-idle"
   },
   "author": "Ng-Idle Team",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/moribvndvs/ng2-idle.git/issues"
+    "url": "https://github.com/fishdaa/ng2-idle/issues"
   },
-  "homepage": "https://github.com/moribvndvs/ng2-idle.git#readme",
+  "homepage": "https://github.com/fishdaa/ng2-idle#readme",
   "private": true,
   "scripts": {
     "prepare": "husky install",
@@ -71,20 +71,20 @@
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "commitlint": "^20.1.0",
-    "coveralls": "^3.1.0",
+    "coveralls": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^8.38.0",
     "husky": "^8.0.3",
     "jasmine-core": "~4.6.0",
     "jasmine-spec-reporter": "~7.0.0",
-    "karma": "~6.4.2",
+    "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
     "lerna": "^9.0.1",
     "ng-packagr": "^20.0.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^6.1.2",
     "typescript": "^5.4.0"
   },
   "config": {
@@ -98,6 +98,12 @@
     "js-yaml": ">=4.1.1",
     "tmp": ">=0.2.3",
     "xml2js": ">=0.5.0",
-    "tar": ">=6.2.1"
+    "tar": ">=6.2.1",
+    "uuid": ">=7.0.0",
+    "rimraf": "$rimraf",
+    "karma": {
+      "glob": "^8.1.0",
+      "rimraf": "^3.0.2"
+    }
   }
 }
